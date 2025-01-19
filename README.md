@@ -130,3 +130,7 @@ Sonuç Analizi
 ```python
 pip install pandas numpy scikit-learn
 ```
+# Kaynak
++ https://www.kaggle.com/datasets/fatemehmehrparvar/obesity-levels/data
++ https://colab.research.google.com/
++ https://chatgpt.com/
