@@ -85,6 +85,8 @@ Sonuç Analizi
 Çıktılar, her bir modelin eğitim ve test sürecinin sonuçlarını göstermektedir. Her model için doğruluk (accuracy), precision, recall, f1-score, ve support değerleri bulunmaktadır:
 ```
 # Sonuç Analizi
+![image](https://github.com/user-attachments/assets/b7f4c412-5a57-4a5b-86a2-3751254e0ba6)
+
 ## 1. Lojistik Regresyon
 * Doğruluk (Accuracy): 0.65
 * Modelin genel doğruluğu %65. Bu, modelin sınıflandırmalarda doğru sonuç verme oranının düşük olduğunu gösteriyor.
