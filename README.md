@@ -5,13 +5,13 @@ Bu projede, obezite ile ilgili veriler üzerinde analiz yaparak, eksik verileri 
 # 1. Kütüphanelerin İçe Aktarılması
 Projemizin başında, veri analizi, ön işleme ve makine öğrenimi için gerekli kütüphaneler içe aktarılmaktadır. Bu kütüphaneler arasında pandas, numpy, ve sklearn gibi araçlar yer almaktadır.
 
-import pandas as pd
-from sklearn.preprocessing import LabelEncoder, MinMaxScaler
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report
+### import pandas as pd
+### from sklearn.preprocessing import LabelEncoder, MinMaxScaler
+### from sklearn.model_selection import train_test_split
+### from sklearn.linear_model import LogisticRegression
+### from sklearn.tree import DecisionTreeClassifier
+### from sklearn.ensemble import RandomForestClassifier
+### from sklearn.metrics import accuracy_score, classification_report
 
 # 2. Veri Setinin Yüklenmesi
 Obezite veri seti, CSV dosyasından yüklenir. Bu veri seti, obeziteyle ilişkili çeşitli özellikleri içerir.
