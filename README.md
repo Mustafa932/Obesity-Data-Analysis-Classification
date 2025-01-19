@@ -12,6 +12,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
+python```
 
 # 2. Veri Setinin Yüklenmesi
 Obezite veri seti, CSV dosyasından yüklenir. Bu veri seti, obeziteyle ilişkili çeşitli özellikleri içerir.
