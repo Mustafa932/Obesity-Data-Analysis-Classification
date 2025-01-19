@@ -12,45 +12,45 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
-python```
+```
 
 # 2. Veri Setinin Yüklenmesi
 Obezite veri seti, CSV dosyasından yüklenir. Bu veri seti, obeziteyle ilişkili çeşitli özellikleri içerir.
-
+```python
 data = pd.read_csv('/content/ObesityDataSet_raw_and_data_sinthetic (1).csv')
-
+```
 # 3. Eksik Veri Analizi
 Veri setindeki eksik değerler hesaplanır ve bu eksikliklerin sayısı ve yüzdesi belirlenir.
-
+```python
 missing_data = data.isnull().sum()
 missing_data_percentage = (missing_data / len(data)) * 100
 
 print("Eksik Veri Sayısı:\n", missing_data)
 print("\nEksik Veri Yüzdesi:\n", missing_data_percentage)
-
+```
 # 4. Eksik Verilerin Doldurulması
 Eksik veriler şu şekilde doldurulur:
-
+```python
 Sayısal sütunlar, ortalama değerle doldurulur.
 Kategorik sütunlar, en sık görülen değerle doldurulur.
 
 data['Weight'] = data['Weight'].fillna(data['Weight'].mean())
 data['Gender'] = data['Gender'].fillna(data['Gender'].mode()[0])
-
+```
 # 5. Veri Dönüştürme
 One-Hot Encoding: Kategorik değişkenler sayısal formata dönüştürülür.
 Label Encoding: Kategorik sütunlar etiketlenir.
-
+```python
 data = pd.get_dummies(data, columns=['Gender', 'family_history_with_overweight'], drop_first=True)
 encoder = LabelEncoder()
 data['FAVC'] = encoder.fit_transform(data['FAVC'])
-
+```
 # 6. Veri Normalizasyonu
 Sayısal veriler Min-Max Normalizasyonu yöntemi ile ölçeklenir.
-
+```python
 scaler = MinMaxScaler()
 data[['Weight', 'Height']] = scaler.fit_transform(data[['Weight', 'Height']])
-
+```
 # 7. Makine Öğrenimi Modelleme
 
 Kategorik sütunlar etiketlenir ve özellikler hedef değişkeninden ayrılır.
@@ -62,25 +62,28 @@ Rastgele Orman
 Her modelin doğruluk oranları ve sınıflandırma raporları yazdırılır.
 
 # Lojistik Regresyon
+```python
 logreg_model = LogisticRegression()
 logreg_model.fit(X_train, y_train)
 y_pred_logreg = logreg_model.predict(X_test)
 accuracy_logreg = accuracy_score(y_test, y_pred_logreg)
-
+```
 # Karar Ağacı
+```python
 dt_model = DecisionTreeClassifier()
 dt_model.fit(X_train, y_train)
 y_pred_dt = dt_model.predict(X_test)
 accuracy_dt = accuracy_score(y_test, y_pred_dt)
-
+```
 # Rastgele Orman
+```python
 rf_model = RandomForestClassifier()
 rf_model.fit(X_train, y_train)
 y_pred_rf = rf_model.predict(X_test)
 accuracy_rf = accuracy_score(y_test, y_pred_rf)
 Sonuç Analizi
 Çıktılar, her bir modelin eğitim ve test sürecinin sonuçlarını göstermektedir. Her model için doğruluk (accuracy), precision, recall, f1-score, ve support değerleri bulunmaktadır:
-
+```
 # 1. Lojistik Regresyon
 Doğruluk (Accuracy): 0.65
 Modelin genel doğruluğu %65. Bu, modelin sınıflandırmalarda doğru sonuç verme oranının düşük olduğunu gösteriyor.
