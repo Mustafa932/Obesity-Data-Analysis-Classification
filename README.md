@@ -86,30 +86,30 @@ Sonuç Analizi
 ```
 # Sonuç Analizi
 ## 1. Lojistik Regresyon
-Doğruluk (Accuracy): 0.65
-Modelin genel doğruluğu %65. Bu, modelin sınıflandırmalarda doğru sonuç verme oranının düşük olduğunu gösteriyor.
-Precision: Bazı sınıflarda düşük değerler var (örneğin, sınıf 4 ve 6).
-Recall: Bazı sınıflarda oldukça düşük (örneğin, sınıf 6'da %35).
-F1-Score: Genel olarak düşük değerler mevcut, özellikle sınıf 6 için %37 gibi düşük bir değer.
-Lojistik Regresyon modeli, bu veri setinde zayıf performans göstermektedir, özellikle sınıflar arasında dengesizlik bulunmakta. Bu model, daha karmaşık ilişkileri yeterince iyi öğrenememiş görünüyor.
+* Doğruluk (Accuracy): 0.65
+* Modelin genel doğruluğu %65. Bu, modelin sınıflandırmalarda doğru sonuç verme oranının düşük olduğunu gösteriyor.
+* Precision: Bazı sınıflarda düşük değerler var (örneğin, sınıf 4 ve 6).
+* Recall: Bazı sınıflarda oldukça düşük (örneğin, sınıf 6'da %35).
+* F1-Score: Genel olarak düşük değerler mevcut, özellikle sınıf 6 için %37 gibi düşük bir değer.
+* Lojistik Regresyon modeli, bu veri setinde zayıf performans göstermektedir, özellikle sınıflar arasında dengesizlik bulunmakta. Bu model, daha karmaşık ilişkileri yeterince iyi öğrenememiş görünüyor.
 
 ## 2. Karar Ağacı
-Doğruluk (Accuracy): 0.94
-Modelin genel doğruluğu %94, bu oldukça yüksek bir başarı oranıdır.
-Precision ve Recall: Genellikle %90 ve üzeri değerler almış, bu da modelin tahminlerde oldukça başarılı olduğunu gösteriyor.
-F1-Score: Yüksek F1-Skorları (çoğunlukla %94 ve üzeri) ile, hem hataları iyi yakalıyor hem de doğru sınıflandırmaları başarıyla yapıyor.
-Karar Ağacı modeli, Lojistik Regresyona göre çok daha iyi performans göstermekte. Sınıflar arasında dengeli bir sonuç vermiş ve karmaşık ilişkileri daha iyi öğrenmiş.
+* Doğruluk (Accuracy): 0.94
+* Modelin genel doğruluğu %94, bu oldukça yüksek bir başarı oranıdır.
+* Precision ve Recall: Genellikle %90 ve üzeri değerler almış, bu da modelin tahminlerde oldukça başarılı olduğunu gösteriyor.
+* F1-Score: Yüksek F1-Skorları (çoğunlukla %94 ve üzeri) ile, hem hataları iyi yakalıyor hem de doğru sınıflandırmaları başarıyla yapıyor.
+* Karar Ağacı modeli, Lojistik Regresyona göre çok daha iyi performans göstermekte. Sınıflar arasında dengeli bir sonuç vermiş ve karmaşık ilişkileri daha iyi öğrenmiş.
 
 ## 3. Rastgele Orman
-Doğruluk (Accuracy): 0.96
-Rastgele Orman modeli %96 doğruluk oranı ile en iyi sonucu vermiş.
-Precision ve Recall: Çoğu sınıfta %90 ve üzeri değerler alarak, doğru tahmin oranının yüksek olduğunu gösteriyor.
-F1-Score: Neredeyse tüm sınıflar için %95 ve üzeri F1-Skorları mevcut, bu da hem yüksek hassasiyet hem de geri çağırma oranlarının dengeli olduğunu ortaya koyuyor.
-Rastgele Orman modeli, diğer iki modele kıyasla en iyi performansı sergilemiş. Genellikle yüksek doğruluk, hassasiyet ve geri çağırma oranları ile bu model veri setindeki ilişkileri daha iyi öğrenmiş.
-Genel Değerlendirme:
-Rastgele Orman modeli, sınıflandırmada en iyi performansı göstermiştir, ardından Karar Ağacı gelmektedir.
-Lojistik Regresyon modeli, doğruluğu ve diğer metrikleri açısından en düşük performansı sergilemiştir, bu da lineer olmayan ilişkileri öğrenmede yetersiz kaldığını gösterir.
-Özetle, bu veri seti için Rastgele Orman en iyi seçimdir çünkü daha karmaşık ve doğrusal olmayan ilişkileri daha iyi yakalayabilir. Bu sonuçlar, daha güçlü ve daha karmaşık modellerin (Karar Ağacı ve Rastgele Orman) daha iyi performans gösterdiğini ortaya koymaktadır.
+* Doğruluk (Accuracy): 0.96
+* Rastgele Orman modeli %96 doğruluk oranı ile en iyi sonucu vermiş.
+* Precision ve Recall: Çoğu sınıfta %90 ve üzeri değerler alarak, doğru tahmin oranının yüksek olduğunu gösteriyor.
+* F1-Score: Neredeyse tüm sınıflar için %95 ve üzeri F1-Skorları mevcut, bu da hem yüksek hassasiyet hem de geri çağırma oranlarının dengeli olduğunu ortaya koyuyor.
+* Rastgele Orman modeli, diğer iki modele kıyasla en iyi performansı sergilemiş. Genellikle yüksek doğruluk, hassasiyet ve geri çağırma oranları ile bu model veri setindeki ilişkileri daha iyi öğrenmiş.
+* Genel Değerlendirme:
+* Rastgele Orman modeli, sınıflandırmada en iyi performansı göstermiştir, ardından Karar Ağacı gelmektedir.
+* Lojistik Regresyon modeli, doğruluğu ve diğer metrikleri açısından en düşük performansı sergilemiştir, bu da lineer olmayan ilişkileri öğrenmede yetersiz kaldığını gösterir.
+* Özetle, bu veri seti için Rastgele Orman en iyi seçimdir çünkü daha karmaşık ve doğrusal olmayan ilişkileri daha iyi yakalayabilir. Bu sonuçlar, daha güçlü ve daha karmaşık modellerin (Karar Ağacı ve Rastgele Orman) daha iyi performans gösterdiğini ortaya koymaktadır.
 
 # Gereksinimler
 + Python 3.x
