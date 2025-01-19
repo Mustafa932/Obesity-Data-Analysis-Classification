@@ -87,6 +87,13 @@ Sonuç Analizi
 # Sonuç Analizi
 ![image](https://github.com/user-attachments/assets/b7f4c412-5a57-4a5b-86a2-3751254e0ba6)
 
+![image](https://github.com/user-attachments/assets/10ffd65a-c1a4-461c-989f-d76946b12e32)
+
+![image](https://github.com/user-attachments/assets/b1d40c51-24ab-47e8-920a-a209f7de14a3)
+
+![image](https://github.com/user-attachments/assets/db44bd7f-2cc0-4448-9f4c-a2ac9e181f65)
+
+
 ## 1. Lojistik Regresyon
 * Doğruluk (Accuracy): 0.65
 * Modelin genel doğruluğu %65. Bu, modelin sınıflandırmalarda doğru sonuç verme oranının düşük olduğunu gösteriyor.
