@@ -86,3 +86,28 @@ y_pred_rf = rf_model.predict(X_test)
 accuracy_rf = accuracy_score(y_test, y_pred_rf)
 print("Rastgele Orman Doğruluk:", accuracy_rf)
 print(classification_report(y_test, y_pred_rf))
+
+# Görselleştirmeler
+# Örnek 1: Sınıf Dağılımı
+plt.figure(figsize=(8, 6))
+sns.countplot(x='NObeyesdad', data=data)
+plt.title('Sınıf Dağılımı')
+plt.xlabel('Obezite Seviyesi')
+plt.ylabel('Sayı')
+plt.show()
+
+# Örnek 2: Yaş ve Kilo Dağılımı
+plt.figure(figsize=(8, 6))
+sns.scatterplot(x='Age', y='Weight', hue='NObeyesdad', data=data)
+plt.title('Yaş ve Kilo Dağılımı')
+plt.xlabel('Yaş')
+plt.ylabel('Kilo')
+plt.show()
+
+# Örnek 3: Öznitelik Önemi (Rastgele Orman için)
+feature_importances = pd.Series(rf_model.feature_importances_, index=X.columns)
+feature_importances.nlargest(10).plot(kind='barh')
+plt.title('Öznitelik Önemi (Rastgele Orman)')
+plt.xlabel('Önem')
+plt.ylabel('Öznitelik')
+plt.show()
