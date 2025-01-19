@@ -118,7 +118,6 @@ Sonuç Analizi
 + pandas
 + numpy
 + scikit-learn
-+ Kurulum
 
 # Gerekli kütüphaneleri yüklemek için aşağıdaki komutu kullanabilirsiniz:
 ```python
