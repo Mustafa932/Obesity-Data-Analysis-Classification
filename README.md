@@ -134,3 +134,6 @@ pip install pandas numpy scikit-learn
 + https://www.kaggle.com/datasets/fatemehmehrparvar/obesity-levels/data
 + https://colab.research.google.com/
 + https://chatgpt.com/
+
+## Açıklama videosu
+* https://drive.google.com/file/d/1VeTEU7a3-fZUUXrEc6wSl_1zMJXOJ7bD/view?usp=drive_link
